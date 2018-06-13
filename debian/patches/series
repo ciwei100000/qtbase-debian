@@ -1,18 +1,12 @@
 # Backported from upstream.
-dead_key_symbols.diff
-qt5-qtbase-5.9.1-openssl11.patch
-dbustray_newmenu_signal.diff
-extend_mariadb_define_check.diff
-fix-loading-OpenGL-when-symlink-missing.patch
+hidpi_scale_at_192.diff
 
 # Debian specific.
 gnukfreebsd.diff
 no_htmlinfo_example.diff
 remove_privacy_breachs.diff
 link_fbclient.diff
-gnukfreebsd_cloexec.diff
+gnukfreebsd_linker_warnings.diff
 armv4.diff
 nonlinux_utime.diff
-
-# Not yet forwarded.
-hidpi_scale_at_192.diff
+no_arc4random_buf.diff

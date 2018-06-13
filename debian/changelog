@@ -1,3 +1,13 @@
+qtbase-opensource-src (5.11.0+dfsg-2) UNRELEASED; urgency=medium
+
+  [ Lisandro Damián Nicanor Pérez Meyer ]
+  * Change references to alioth/git.debian.org to salsa.debian.org.
+
+  [ Dmitry Shachnev ]
+  * Configure with triplet-prefixed version of pkg-config (closes: #899382).
+
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Fri, 25 May 2018 09:37:40 -0300
+
 qtbase-opensource-src (5.9.5+dfsg-0ubuntu1) bionic; urgency=medium
 
   [ Simon Quigley ]
@@ -15,6 +25,89 @@ qtbase-opensource-src (5.9.5+dfsg-0ubuntu1) bionic; urgency=medium
 
  -- Simon Quigley <tsimonq2@ubuntu.com>  Thu, 12 Apr 2018 18:24:40 -0500
 
+qtbase-opensource-src (5.11.0+dfsg-1) experimental; urgency=medium
+
+  [ Dmitry Shachnev ]
+  * debian/copyright: Update for changed/removed files in 5.11.
+
+  [ Lisandro Damián Nicanor Pérez Meyer ]
+  * Bump Build-Depends-Indep's Qt dependencies.
+
+  [ Simon Quigley ]
+  * Update symbols from buildd logs.
+  * New upstream release.
+  * Bump build dependencies to 5.11.0.
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Tue, 22 May 2018 18:19:48 -0500
+
+qtbase-opensource-src (5.11.0~rc1+dfsg-1) experimental; urgency=medium
+
+  * New upstream release candidate.
+  * Refresh patches for the new upstream release, and remove
+    reverse-applicable ones:
+    - dead_key_symbols.diff
+    - extend_mariadb_define_check.diff
+    - fix_loading_opengl.diff
+    - mesa_18.diff
+    - resources_for_examples.diff
+  * Update install files for new upstream files.
+    - Add new binary package qt5-flatpak-platformtheme.
+  * Bump debhelper compat to 11, no changes needed.
+  * Add my name to the copyright for the Debian packaging.
+  * Update copyright using debian/scripts/update-copyright.
+  * Update symbols from amd64 build logs.
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Tue, 15 May 2018 23:08:16 -0500
+
+qtbase-opensource-src (5.10.1+dfsg-7) unstable; urgency=medium
+
+  [ Dmitry Shachnev ]
+  * Remove gdb from Build-Depends (closes: #897940).
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Sun, 20 May 2018 18:57:15 -0300
+
+qtbase-opensource-src (5.10.1+dfsg-6) unstable; urgency=medium
+
+  [ Simon Quigley ]
+  * Add my name to Uploaders.
+
+  [ Dmitry Shachnev ]
+  * Backport upstream patch to fix loading OpenGL library in the GLX
+    integration plugin (closes: #886400).
+  * Replace hidpi_scale_at_192.diff with a version that has been applied
+    upstream (closes: #884956).
+  * Update symbols files from buildds’ logs.
+  * Bump qttools5-dev-tools (indep-)build-dependency to 5.10.1.
+  * Bump Standards-Version to 4.1.4, no changes needed.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Wed, 02 May 2018 20:50:22 +0300
+
+qtbase-opensource-src (5.10.1+dfsg-5) unstable; urgency=medium
+
+  * Update symbols files with buildd's logs.
+  * Release to unstable.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Sat, 07 Apr 2018 16:35:57 -0300
+
+qtbase-opensource-src (5.10.1+dfsg-4) experimental; urgency=medium
+
+  * Brown paperbag release: remove support_legacy_x11_keymaps.patch which I
+    included in the previous upload. It clearly does not builds. Sadly this
+    also means that backporting the fixes might not be easy to achieve.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Sat, 17 Mar 2018 15:29:52 -0300
+
+qtbase-opensource-src (5.10.1+dfsg-3) experimental; urgency=medium
+
+  [ Dmitry Shachnev ]
+  * Update list of Qt WebKit build-dependencies in debian/README.source.
+
+  [ Lisandro Damián Nicanor Pérez Meyer ]
+  * Backport support_legacy_x11_keymaps.patch (Closes: #814959, #818232).
+  * Update symbols files with buildds' logs.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Sat, 17 Mar 2018 13:14:47 -0300
+ 
 qtbase-opensource-src (5.9.4+dfsg-0ubuntu4) bionic; urgency=medium
 
   * Merge from Debian Sid. Remaining changes:
@@ -27,6 +120,71 @@ qtbase-opensource-src (5.9.4+dfsg-0ubuntu4) bionic; urgency=medium
   * Update symbols from build logs.
 
  -- Simon Quigley <tsimonq2@ubuntu.com>  Thu, 15 Mar 2018 23:37:26 -0500
+
+qtbase-opensource-src (5.10.1+dfsg-2) experimental; urgency=medium
+
+  [ Lisandro Damián Nicanor Pérez Meyer ]
+  * Merge 5.9.2+dfsg-12 upload from unstable.
+  * Refresh patches, specially those coming from merging master.
+
+  [ Pino Toscano ]
+  * Update patch nonlinux_utime.diff with a new UTIME_OMIT usage in 5.10.
+
+  [ Dmitry Shachnev ]
+  * Add upstream patch to fix installation of resources for example sources.
+    Thanks to Alexander Volkov.
+  * Add upstream patch to fix rendering issues with Mesa 18.
+  * Update debian/libqt5network5.symbols for powerpc.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Fri, 23 Feb 2018 00:04:29 +0300
+
+qtbase-opensource-src (5.10.1+dfsg-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Rename gnukfreebsd_cloexec.diff to gnukfreebsd_linker_warnings.diff.
+    Add two more places where config tests are currently false positives.
+  * Merge 5.9.2+dfsg-10 upload from unstable.
+  * Update symbols files from buildds’ and current build logs.
+  * Drop qdnslookup_crash.diff and http2_headers.diff, included in the new
+    release.
+  * Refresh other patches.
+  * Update Vcs fields for migration to salsa.debian.org.
+  * Update debian/copyright with help of debian/scripts/update-copyright.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Fri, 16 Feb 2018 18:03:53 +0300
+
+qtbase-opensource-src (5.10.0+dfsg-2) experimental; urgency=medium
+
+  * Bump qtbase-abi to 5-10-0, as in 5.10 there were removed symbols.
+  * Do not attempt to use arc4random_buf() on GNU/kFreeBSD, it is missing
+    there (no_arc4random_buf.diff).
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Thu, 07 Dec 2017 17:27:40 +0300
+
+qtbase-opensource-src (5.10.0+dfsg-1) experimental; urgency=medium
+
+  [ Lisandro Damián Nicanor Pérez Meyer ]
+  * Merge 5.9.2+dfsg-6 upload from unstable.
+
+  [ Dmitry Shachnev ]
+  * New upstream stable release.
+  * Update symbols files from buildds’ logs.
+  * Update debian/watch to track 5.10.0 official releases.
+  * Exclude licheck binaries from the tarball, they have no source.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Thu, 07 Dec 2017 11:17:10 +0300
+
+qtbase-opensource-src (5.10.0~rc1+dfsg-1) experimental; urgency=medium
+
+  * New upstream release candidate.
+  * Update debian/watch to track 5.10 development releases.
+  * Drop qglxconvenience_nullptr.diff, included upstream.
+  * Build with OpenSSL 1.1 (closes: #859671).
+  * Update install files for the new version.
+  * Update symbols files from the current build logs.
+  * Update debian/copyright using debian/scripts/update-copyright.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Tue, 28 Nov 2017 16:43:35 +0300
 
 qtbase-opensource-src (5.9.2+dfsg-12) unstable; urgency=medium
 
@@ -362,7 +520,7 @@ qtbase-opensource-src (5.9.1+dfsg-5ubuntu2) artful; urgency=medium
 
 qtbase-opensource-src (5.9.1+dfsg-5ubuntu1) artful; urgency=medium
 
-  [ Timo Jyrinki ]
+  [ Timo Jyrinki ]
   * Drop support for twin gles packages.
   * Drop Ubuntu specific patches and patches that will be in upstream 5.9.
    - Add-workaround-for-GL-on-Android-emulator.patch - 5.9
@@ -1823,21 +1981,21 @@ qtbase-opensource-src (5.4.1+dfsg-4ubuntu1) wily; urgency=medium
     - Use our symbols files, including supporting gles x86 Qt
     - Tests enabled (xvfb dep, debian/rules, enable-tests.patch)
     - Additional patches, cherry-picked/upstreamed:
-      | Correct-typo-in-the-Gujarati-openType-identififer.patch
-      | load_testability_from_env_var.patch
-      | make-sure-there-s-a-scene.patch
-      | upstream_xcb-Update-mouse-buttons-from-MotionNotify-events.patch
-      | upstream-gerrit_Handle-SelectionWindowDestroy-in-QXcbClipboard.patch
-      | upstream_Call-ofono-nm-Registered-delayed-in-constructor-othe.patch
-      | upstream_xcb_use_themed_cursor.patch
+      | Correct-typo-in-the-Gujarati-openType-identififer.patch
+      | load_testability_from_env_var.patch
+      | make-sure-there-s-a-scene.patch
+      | upstream_xcb-Update-mouse-buttons-from-MotionNotify-events.patch
+      | upstream-gerrit_Handle-SelectionWindowDestroy-in-QXcbClipboard.patch
+      | upstream_Call-ofono-nm-Registered-delayed-in-constructor-othe.patch
+      | upstream_xcb_use_themed_cursor.patch
     - Additional patches, Ubuntu specific:
       | enable_pie.patch
-      | disable_overlay_scrollbars.diff
-      | qt5-qmake-arm-linux-gnueabihf
-      | Add-workaround-for-GL-on-Android-emulator.patch
-      | enable-tests.patch
-      | qopenglframebufferobject_powervrworkaround.patch
-      | disable-generic-plugin-when-others-available.patch
+      | disable_overlay_scrollbars.diff
+      | qt5-qmake-arm-linux-gnueabihf
+      | Add-workaround-for-GL-on-Android-emulator.patch
+      | enable-tests.patch
+      | qopenglframebufferobject_powervrworkaround.patch
+      | disable-generic-plugin-when-others-available.patch
   * Switch qtbase over to Debian git
 
  -- Timo Jyrinki <timo-jyrinki@ubuntu.com>  Fri, 22 May 2015 05:14:09 +0000
