@@ -1,9 +1,23 @@
-qtbase-opensource-src (5.11.1+dfsg-1ubuntu1) UNRELEASED; urgency=medium
+qtbase-opensource-src (5.11.1+dfsg-2ubuntu1) UNRELEASED; urgency=medium
 
   * Merge from Debian Sid. Remaining changes:
     - Add arm64 to the architectures that GLES is enabled on.
 
  -- Simon Quigley <tsimonq2@ubuntu.com>  Tue, 19 Jun 2018 14:34:28 -0500
+
+qtbase-opensource-src (5.11.1+dfsg-2) experimental; urgency=medium
+
+  [ Dmitry Shachnev ]
+  * Fix version of qttools5-dev-tools build-dependency.
+
+  [ Simon Quigley ]
+  * Remove the dbgsym migration section of debian/rules; it isn't needed
+    anymore.
+  * Bump the virtual ABI package to qtbase-abi-5-11-0 because symbols
+    were retracted.
+  * Update symbols from buildd logs.
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Wed, 20 Jun 2018 14:14:42 -0500
 
 qtbase-opensource-src (5.11.1+dfsg-1) experimental; urgency=medium
 
