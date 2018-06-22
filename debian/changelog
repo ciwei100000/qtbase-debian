@@ -1,9 +1,9 @@
-qtbase-opensource-src (5.11.1+dfsg-2ubuntu1) UNRELEASED; urgency=medium
+qtbase-opensource-src (5.11.1+dfsg-2ubuntu1) cosmic; urgency=medium
 
   * Merge from Debian Sid. Remaining changes:
     - Add arm64 to the architectures that GLES is enabled on.
 
- -- Simon Quigley <tsimonq2@ubuntu.com>  Tue, 19 Jun 2018 14:34:28 -0500
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Thu, 21 Jun 2018 20:29:27 -0500
 
 qtbase-opensource-src (5.11.1+dfsg-2) experimental; urgency=medium
 
