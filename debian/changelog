@@ -1,9 +1,19 @@
-qtbase-opensource-src (5.11.1+dfsg-2ubuntu2) cosmic; urgency=medium
+qtbase-opensource-src (5.11.1+dfsg-3ubuntu1) cosmic; urgency=medium
 
   * Merge from Debian Experimental. Remaining changes:
     - Add arm64 to the architectures that GLES is enabled on.
 
  -- Simon Quigley <tsimonq2@ubuntu.com>  Thu, 21 Jun 2018 20:29:27 -0500
+
+qtbase-opensource-src (5.11.1+dfsg-3) experimental; urgency=medium
+
+  * Bump Standards-version to 4.1.5, no changes needed.
+  * Revert an upstream commit which causes KMainWindow to save an invalid
+    window/widget state. This is per advice from upstream KDE and other
+    distributors who have done the same, but patches are being sent upstream
+    fixing the issue.
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Thu, 05 Jul 2018 14:48:31 -0500
 
 qtbase-opensource-src (5.11.1+dfsg-2) experimental; urgency=medium
 
