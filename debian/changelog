@@ -1,9 +1,17 @@
-qtbase-opensource-src (5.11.1+dfsg-3ubuntu1) cosmic; urgency=medium
+qtbase-opensource-src (5.11.1+dfsg-4ubuntu1) cosmic; urgency=medium
 
   * Merge from Debian Experimental. Remaining changes:
     - Add arm64 to the architectures that GLES is enabled on.
 
  -- Simon Quigley <tsimonq2@ubuntu.com>  Thu, 21 Jun 2018 20:29:27 -0500
+
+qtbase-opensource-src (5.11.1+dfsg-4) experimental; urgency=medium
+
+  * Add fix_regresion_in_QPointF_operator_equals.patch to fix wrong check in
+    QPointF (Closes: #903237).
+  * Update symbols files with buildds' logs.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Tue, 10 Jul 2018 10:19:04 -0300
 
 qtbase-opensource-src (5.11.1+dfsg-3) experimental; urgency=medium
 
