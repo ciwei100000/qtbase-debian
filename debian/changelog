@@ -1,9 +1,20 @@
-qtbase-opensource-src (5.11.1+dfsg-4ubuntu1) cosmic; urgency=medium
+qtbase-opensource-src (5.11.1+dfsg-5ubuntu1) cosmic; urgency=medium
 
   * Merge from Debian Experimental. Remaining changes:
     - Add arm64 to the architectures that GLES is enabled on.
 
- -- Simon Quigley <tsimonq2@ubuntu.com>  Thu, 21 Jun 2018 20:29:27 -0500
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Thu, 19 Jul 2018 23:39:32 -0500
+
+qtbase-opensource-src (5.11.1+dfsg-5) experimental; urgency=medium
+
+  [ Rohan Garg ]
+  * Update watch url to a better path.
+
+  [ Simon Quigley ]
+  * Add patch fixing selection rendering issues if rounding leads to left-out
+    pixels.
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Thu, 19 Jul 2018 23:33:59 -0500
 
 qtbase-opensource-src (5.11.1+dfsg-4) experimental; urgency=medium
 
