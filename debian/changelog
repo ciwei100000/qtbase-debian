@@ -1,3 +1,27 @@
+qtbase-opensource-src (5.11.1+dfsg-7ubuntu1) cosmic; urgency=medium
+
+  * Merge from Debian Experimental. Remaining changes:
+    - Add arm64 to the architectures that GLES is enabled on.
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Sat, 25 Aug 2018 12:59:22 -0500
+
+qtbase-opensource-src (5.11.1+dfsg-7) unstable; urgency=medium
+
+  [ Lisandro Damián Nicanor Pérez Meyer ]
+  * Build depend upon libharfbuzz >= 1.6.0~ as required by the code
+    (Closes: #905660). Thanks Andreas Ferber for the bug report.
+
+  [ Simon Quigley ]
+  * Fix the build with glibc 2.28.
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Sat, 25 Aug 2018 12:32:18 -0500
+
+qtbase-opensource-src (5.11.1+dfsg-6) unstable; urgency=medium
+
+  * Upload to Sid.
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Wed, 25 Jul 2018 04:49:30 -0500
+
 qtbase-opensource-src (5.11.1+dfsg-5ubuntu1) cosmic; urgency=medium
 
   * Merge from Debian Experimental. Remaining changes:
