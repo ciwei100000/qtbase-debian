@@ -1,3 +1,9 @@
+qtbase-opensource-src (5.11.1+dfsg-7ubuntu2) cosmic; urgency=medium
+
+  * Add a patch to pass default include directories to qdoc (LP: #1799111).
+
+ -- Dmitry Shachnev <mitya57@ubuntu.com>  Fri, 02 Nov 2018 14:41:35 +0300
+
 qtbase-opensource-src (5.11.1+dfsg-7ubuntu1) cosmic; urgency=medium
 
   * Merge from Debian Experimental. Remaining changes:
