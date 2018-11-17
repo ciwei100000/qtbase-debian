@@ -1,3 +1,46 @@
+qtbase-opensource-src (5.11.2+dfsg-6ubuntu1) UNRELEASED; urgency=medium
+
+  * Merge from Debian Sid. Remaining changes:
+    - Add arm64 to the architectures that GLES is enabled on.
+    - Drop build dependency on libpcre2-dev which is in Universe; configure
+      without -system-pcre.
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Thu, 08 Nov 2018 14:42:36 -0600
+
+qtbase-opensource-src (5.11.2+dfsg-6) unstable; urgency=medium
+
+  [ Dmitry Shachnev ]
+  * Stop patching mkspecs/qmodule.pri in override_dh_auto_configure.
+    The condition has changed to !host_build|!cross_compile in Qt 5.9,
+    which is always true for us.
+  * Strip -fdebug-prefix-map=${BUILDDIR} flag from generated qmodule.pri.
+    This flag was unwantedly leaking to builds of other Qt modules.
+    Thanks to Helmut Grohne for noticing it!
+  * Build corelib and gui without -O3 on ia64 as a workaround for GCC bug
+    (PR rtl-optimization/85412).
+  * Update symbols files with buildds’ logs (alpha and kfreebsd-i386).
+
+  [ Lisandro Damián Nicanor Pérez Meyer ]
+  * Backport remove_need_for_glXGetProcAddressARB.patch. This removes the
+    need for using dlopen() and thus libGL.so.1 should be used instead of
+    libGL.so (Closes: #913287).
+  * Include /usr/share/dpkg/pkg-info.mk and replace the call to
+    dpkg-parsechangelog with DEB_VERSION_UPTREAM. According to lintian this
+    should handle more corner cases.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Sat, 17 Nov 2018 19:24:49 -0300
+
+qtbase-opensource-src (5.11.2+dfsg-5) unstable; urgency=medium
+
+  * Add a patch to use qstrncpy instead of strlcpy on GNU/kFreeBSD
+    (kfreebsd_qstrncpy.diff).
+  * Add a patch to fix ambiguous definition of atime/mtime/ctime
+    on alpha, thanks Michael Cree (closes: #896658).
+  * debian/rules: Use qmake cross wrapper in Qt5CoreConfigExtras.cmake
+    (closes: #913499).
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Mon, 12 Nov 2018 10:08:10 +0300
+
 qtbase-opensource-src (5.11.2+dfsg-4ubuntu2) disco; urgency=medium
 
   * No-change rebuild for icu soname change.

@@ -6,6 +6,9 @@
 # Use already defined DEB_HOST_* variables.
 include /usr/share/dpkg/architecture.mk
 
+# Use already defined upstream version as DEB_VERSION_UPSTREAM.
+include /usr/share/dpkg/pkg-info.mk
+
 export PATH := $(PATH):$(shell pwd)/bin
 export CFLAGS := $(shell dpkg-buildflags --get CFLAGS) $(shell dpkg-buildflags --get CPPFLAGS) $(shell getconf LFS_CFLAGS)
 export CXXFLAGS := $(shell dpkg-buildflags --get CXXFLAGS) $(shell dpkg-buildflags --get CPPFLAGS) $(shell getconf LFS_CFLAGS)
@@ -13,7 +16,7 @@ export LDFLAGS := $(shell dpkg-buildflags --get LDFLAGS) -Wl,--as-needed
 export PKG_CONFIG := /usr/bin/$(DEB_HOST_GNU_TYPE)-pkg-config
 
 # Upstream changelog
-upstream_changes := dist/changes-$(shell dpkg-parsechangelog | sed -n 's/^Version: //p' | cut -f1 -d '-' | sed -e 's/+dfsg//' | sed -e 's/+git.*//')
+upstream_changes := dist/changes-$(shell echo $(DEB_VERSION_UPSTREAM) | sed -e 's/+dfsg//' | sed -e 's/+git.*//')
 
 ifneq (,$(filter libqt5sql5-ibase,$(shell dh_listpackages)))
 	extra_configure_opts += -plugin-sql-ibase
@@ -35,6 +38,11 @@ endif
 
 ifneq ($(DEB_HOST_ARCH_OS),$(findstring $(DEB_HOST_ARCH_OS), linux kfreebsd))
 	extra_configure_opts += -no-eglfs
+endif
+
+# See https://gcc.gnu.org/bugzilla/show_bug.cgi?id=85412
+ifeq ($(DEB_HOST_ARCH),ia64)
+	extra_configure_opts += QMAKE_CFLAGS_OPTIMIZE_FULL-=-O3
 endif
 
 # Compile without sse2 support on i386
@@ -114,11 +122,6 @@ override_dh_auto_configure:
 	            QMAKE_CFLAGS="$(CFLAGS)" \
 	            QMAKE_CXXFLAGS="$(CXXFLAGS)" \
 	            QMAKE_LFLAGS="$(LDFLAGS)"
-	# qtConfOutput_qmakeArgs sets the flags inside a !host_build {...}
-	# block, but we want them to be set for tools using host_build too.
-	sed -i "s/\!host_build {/true {/" mkspecs/qmodule.pri
-	# Prevent Makefile from re-running qmake after the .pri was changed.
-	touch Makefile
 
 override_dh_auto_clean:
 	[ ! -f Makefile ] || $(MAKE) confclean distclean
@@ -269,6 +272,13 @@ endif
 		-e 's/@DEB_HOST_GNU_TYPE@/$(DEB_HOST_GNU_TYPE)/g' \
 		< debian/qmake-cross-wrapper.in > debian/tmp/usr/bin/$(DEB_HOST_GNU_TYPE)-qmake
 	chmod +x debian/tmp/usr/bin/$(DEB_HOST_GNU_TYPE)-qmake
+
+	# See https://bugs.debian.org/913499
+	sed -i 's,lib/qt5/bin/qmake,bin/$(DEB_HOST_GNU_TYPE)-qmake,' \
+		debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/cmake/Qt5Core/Qt5CoreConfigExtras.cmake
+
+	sed -i 's,-fdebug-prefix-map=$(CURDIR)=. ,,' \
+		debian/tmp/usr/lib/$(DEB_HOST_MULTIARCH)/qt5/mkspecs/qmodule.pri
 
 override_dh_auto_install-indep:
 	dh_auto_build -- INSTALL_ROOT=$(CURDIR)/debian/tmp install_docs
