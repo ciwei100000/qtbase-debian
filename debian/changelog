@@ -1,3 +1,19 @@
+qtbase-opensource-src (5.11.2+dfsg-7ubuntu1) UNRELEASED; urgency=medium
+
+  * Merge from Debian Sid. Remaining changes:
+    - Add arm64 to the architectures that GLES is enabled on.
+    - Drop build dependency on libpcre2-dev which is in Universe; configure
+      without -system-pcre.
+
+ -- Rik Mills <rikmills@kubuntu.org>  Mon, 19 Nov 2018 15:35:18 +0000
+
+qtbase-opensource-src (5.11.2+dfsg-7) unstable; urgency=medium
+
+  * Change the fix for #913499 to not break FindQHelpGenerator.cmake
+    that is shipped by extra-cmake-modules (closes: #914045).
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Mon, 19 Nov 2018 00:36:29 +0300
+
 qtbase-opensource-src (5.11.2+dfsg-6ubuntu1) disco; urgency=medium
 
   * Merge from Debian Sid. Remaining changes:
