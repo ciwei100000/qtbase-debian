@@ -1,11 +1,11 @@
-qtbase-opensource-src (5.11.2+dfsg-7ubuntu1) UNRELEASED; urgency=medium
+qtbase-opensource-src (5.11.2+dfsg-7ubuntu1) disco; urgency=medium
 
   * Merge from Debian Sid. Remaining changes:
     - Add arm64 to the architectures that GLES is enabled on.
     - Drop build dependency on libpcre2-dev which is in Universe; configure
       without -system-pcre.
 
- -- Rik Mills <rikmills@kubuntu.org>  Mon, 19 Nov 2018 15:35:18 +0000
+ -- Rik Mills <rikmills@kubuntu.org>  Mon, 19 Nov 2018 15:49:12 +0000
 
 qtbase-opensource-src (5.11.2+dfsg-7) unstable; urgency=medium
 
