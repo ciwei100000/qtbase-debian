@@ -1,3 +1,10 @@
+qtbase-opensource-src (5.11.2+dfsg-7ubuntu2) disco; urgency=medium
+
+  * Readd build dependency on libpcre2-dev and configure with
+    -system-pcre, as qtbase-opensource-src is in the universe now as well.
+
+ -- Dimitri John Ledkov <xnox@ubuntu.com>  Mon, 26 Nov 2018 17:44:53 +0000
+
 qtbase-opensource-src (5.11.2+dfsg-7ubuntu1) disco; urgency=medium
 
   * Merge from Debian Sid. Remaining changes:
