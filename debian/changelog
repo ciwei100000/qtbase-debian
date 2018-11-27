@@ -1,3 +1,13 @@
+qtbase-opensource-src (5.11.2+dfsg-7ubuntu3) disco; urgency=medium
+
+  * debian/control:
+    + Add !arm64 arch qualifications to gl deps - we build for GLES there, so
+      we shouldn't pull in full gl.
+    + Add [armel armhf arm64] qualifications for libgles deps, for the
+      opposite reason.
+
+ -- Iain Lane <iain@orangesquash.org.uk>  Tue, 27 Nov 2018 16:53:43 +0000
+
 qtbase-opensource-src (5.11.2+dfsg-7ubuntu2) disco; urgency=medium
 
   * Readd build dependency on libpcre2-dev and configure with
