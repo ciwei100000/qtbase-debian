@@ -8,7 +8,7 @@ Uploaders: Sune Vuorela <sune@debian.org>,
            Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>,
            Timo Jyrinki <timo@debian.org>,
            Dmitry Shachnev <mitya57@debian.org>,
-           Simon Quigley <tsimonq2@ubuntu.com>
+           Simon Quigley <tsimonq2@debian.org>
 Build-Depends: debhelper (>= 11),
                default-libmysqlclient-dev,
                dh-exec,
@@ -66,8 +66,8 @@ Build-Depends: debhelper (>= 11),
                publicsuffix,
                unixodbc-dev,
                zlib1g-dev
-Build-Depends-Indep: qttools5-dev-tools (>= 5.11.2-4~) <!nodoc>
-Standards-Version: 4.2.1
+Build-Depends-Indep: qttools5-dev-tools (>= 5.11.3-1~) <!nodoc>
+Standards-Version: 4.3.0
 Homepage: http://qt-project.org/
 Vcs-Git: https://salsa.debian.org/qt-kde-team/qt/qtbase.git
 Vcs-Browser: https://salsa.debian.org/qt-kde-team/qt/qtbase
@@ -76,7 +76,7 @@ Package: libqt5core5a
 Architecture: any
 Multi-Arch: same
 Pre-Depends: ${misc:Pre-Depends}
-Provides: qtbase-abi-5-11-2
+Provides: qtbase-abi-5-11-3
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Recommends: qttranslations5-l10n
 Suggests: libthai0

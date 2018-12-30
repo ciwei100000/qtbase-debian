@@ -1,7 +1,6 @@
 # Backported from upstream.
 fix-selection-rendering.patch
 reference_dpi.diff
-dont_get_screen_rotation.diff
 remove_need_for_glXGetProcAddressARB.patch
 
 # Debian specific.
@@ -13,7 +12,7 @@ gnukfreebsd_linker_warnings.diff
 armv4.diff
 nonlinux_utime.diff
 no_arc4random_buf.diff
-ssl_max_version.diff
 qdoc_default_incdirs.diff
 kfreebsd_qstrncpy.diff
 alpha_atimensec.diff
+revert_remove_our_use_of_syscall_for-statx.patch
