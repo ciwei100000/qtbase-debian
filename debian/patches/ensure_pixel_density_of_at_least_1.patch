@@ -1,0 +1,55 @@
+Description: Ensure a pixel density of at least 1 for Qt::AA_EnableHighDpiScaling
+ Backport needed due to VLC being updated in stable. Not the full original patch,
+ as the Qt version in stable does not has the Egl plugin.
+ .
+ Very large 1080p TVs or any display which is running at an abnormally
+ low resolution can have a DPI lower than 48, which means that
+ qRound(dpi/96) will result in a 0 pixel density, causing critical
+ issues for applications using Qt::AA_EnableHighDpiScaling.
+ .
+ Make sure that we always have a pixel density of at least 1 to allow
+ applications not having to worry about such displays.
+Author: Jocelyn Turcotte <jturcotte@woboq.com>
+Forwarded: not-needed
+Bug-Debian: https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=907139
+Reviewed-By: Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>
+
+---
+ src/plugins/platforms/windows/qwindowsscreen.cpp |    2 +-
+ src/plugins/platforms/winrt/qwinrtscreen.cpp     |    2 +-
+ src/plugins/platforms/xcb/qxcbscreen.cpp         |    2 +-
+ 3 files changed, 3 insertions(+), 3 deletions(-)
+
+--- a/src/plugins/platforms/windows/qwindowsscreen.cpp
++++ b/src/plugins/platforms/windows/qwindowsscreen.cpp
+@@ -264,7 +264,7 @@ qreal QWindowsScreen::pixelDensity() con
+     // the pixel density since it is reflects the Windows UI scaling.
+     // High DPI auto scaling should be disabled when the user chooses
+     // small fonts on a High DPI monitor, resulting in lower logical DPI.
+-    return qRound(logicalDpi().first / 96);
++    return qMax(1, qRound(logicalDpi().first / 96));
+ }
+ 
+ /*!
+--- a/src/plugins/platforms/winrt/qwinrtscreen.cpp
++++ b/src/plugins/platforms/winrt/qwinrtscreen.cpp
+@@ -644,7 +644,7 @@ QDpi QWinRTScreen::logicalDpi() const
+ qreal QWinRTScreen::pixelDensity() const
+ {
+     Q_D(const QWinRTScreen);
+-    return qRound(d->logicalDpi / 96);
++    return qMax(1, qRound(d->logicalDpi / 96));
+ }
+ 
+ qreal QWinRTScreen::scaleFactor() const
+--- a/src/plugins/platforms/xcb/qxcbscreen.cpp
++++ b/src/plugins/platforms/xcb/qxcbscreen.cpp
+@@ -633,7 +633,7 @@ void QXcbScreen::updateGeometry(const QR
+         m_sizeMillimeters = sizeInMillimeters(xGeometry.size(), virtualDpi());
+ 
+     qreal dpi = xGeometry.width() / physicalSize().width() * qreal(25.4);
+-    m_pixelDensity = qRound(dpi/96);
++    m_pixelDensity = qMax(1, qRound(dpi/96));
+     m_geometry = QRect(xGeometry.topLeft(), xGeometry.size());
+     m_availableGeometry = xGeometry & m_virtualDesktop->workArea();
+     QWindowSystemInterface::handleScreenGeometryChange(QPlatformScreen::screen(), m_geometry, m_availableGeometry);

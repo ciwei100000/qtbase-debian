@@ -5,6 +5,8 @@ qtbase-opensource-src (5.7.1+dfsg-3+deb9u1) UNRELEASED; urgency=medium
     - CVE-2018-15518: “double free or corruption” in QXmlStreamReader
     - CVE-2018-19873: QBmpHandler segfault on malformed BMP file
     - CVE-2018-19870: Check for QImage allocation failure in qgifhandler
+  * Backport ensure_pixel_density_of_at_least_1.patch in order to fix VLC after
+    it's security update (Closes: #907139).
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Thu, 10 Jan 2019 17:29:39 -0300
 
