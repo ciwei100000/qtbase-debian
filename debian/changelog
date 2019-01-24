@@ -1,5 +1,11 @@
 qtbase-opensource-src (5.7.1+dfsg-4) UNRELEASED; urgency=medium
 
+  [ Lisandro Damián Nicanor Pérez Meyer ]
+  * Backport fixes for:
+    - CVE-2018-15518: “double free or corruption” in QXmlStreamReader
+    - CVE-2018-19873: QBmpHandler segfault on malformed BMP file
+    - CVE-2018-19870: Check for QImage allocation failure in qgifhandler
+
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Thu, 10 Jan 2019 17:29:39 -0300
 
 qtbase-opensource-src (5.7.1+dfsg-3) unstable; urgency=medium
