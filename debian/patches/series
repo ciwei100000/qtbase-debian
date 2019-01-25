@@ -10,7 +10,6 @@ CVE-2018-15518.patch
 CVE-2018-19870.patch
 CVE-2018-19873.patch
 ensure_pixel_density_of_at_least_1.patch
-remove_opengles20_direct_function_calls.patch
 
 # Debian specific.
 no_dbus_dependency.diff
