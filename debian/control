@@ -318,9 +318,9 @@ Package: qtbase5-dev
 Architecture: any
 Multi-Arch: same
 Section: libdevel
-Depends: libgl1-mesa-dev [!armel !armhf !arm64] | libgl-dev [!armel !armhf !arm64],
-         libgles2-mesa-dev [armel armhf arm64] | libgles2-dev [armel armhf arm64],
-         libglu1-mesa-dev [!armel !armhf !arm64] | libglu-dev [!armel !armhf !arm64],
+Depends: libgl1-mesa-dev [!armel !armhf] | libgl-dev [!armel !armhf],
+         libgles2-mesa-dev [armel armhf] | libgles2-dev [armel armhf],
+         libglu1-mesa-dev [!armel !armhf] | libglu-dev [!armel !armhf],
          libqt5concurrent5 (= ${binary:Version}),
          libqt5core5a (= ${binary:Version}),
          libqt5dbus5 (= ${binary:Version}),
@@ -385,7 +385,7 @@ Depends: libqt5opengl5 (= ${binary:Version}),
          ${misc:Depends}
 Breaks: qtbase5-dev (<< 5.11.3+dfsg-4~)
 Replaces: qtbase5-dev (<< 5.11.3+dfsg-4~)
-Provides: libqt5opengl5-desktop-dev (= ${binary:Version}) [!armel !armhf !arm64]
+Provides: libqt5opengl5-desktop-dev (= ${binary:Version}) [!armel !armhf]
 Description: Qt 5 OpenGL library development files
  Qt is a cross-platform C++ application framework. Qt's primary feature
  is its rich set of widgets that provide standard GUI functionality.
