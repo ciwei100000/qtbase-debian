@@ -108,7 +108,9 @@ Package: qt5-gtk-platformtheme
 Architecture: any
 Multi-Arch: same
 Pre-Depends: ${misc:Pre-Depends}
-Depends: libqt5gui5 (= ${binary:Version}), ${misc:Depends}, ${shlibs:Depends}
+Depends: libqt5gui5 (= ${binary:Version}) | libqt5gui5-gles (>= ${source:Upstream-Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
 Description: Qt 5 GTK+ 3 platform theme
  Qt is a cross-platform C++ application framework. Qt's primary feature
  is its rich set of widgets that provide standard GUI functionality.
@@ -120,7 +122,9 @@ Package: qt5-flatpak-platformtheme
 Architecture: any
 Multi-Arch: same
 Pre-Depends: ${misc:Pre-Depends}
-Depends: libqt5gui5 (= ${binary:Version}), ${misc:Depends}, ${shlibs:Depends}
+Depends: libqt5gui5 (= ${binary:Version}) | libqt5gui5-gles (>= ${source:Upstream-Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
 Description: Qt 5 Flatpak platform theme
  Qt is a cross-platform C++ application framework. Qt's primary feature
  is its rich set of widgets that provide standard GUI functionality.
@@ -379,8 +383,8 @@ Section: libdevel
 Depends: libqt5opengl5 (= ${binary:Version}),
          qtbase5-dev (= ${binary:Version}),
          ${misc:Depends}
-Breaks: qtbase5-dev (<< 5.4.0+dfsg-6~)
-Replaces: qtbase5-dev (<< 5.4.0+dfsg-6~)
+Breaks: qtbase5-dev (<< 5.11.3+dfsg-4~)
+Replaces: qtbase5-dev (<< 5.11.3+dfsg-4~)
 Provides: libqt5opengl5-desktop-dev (= ${binary:Version}) [!armel !armhf !arm64]
 Description: Qt 5 OpenGL library development files
  Qt is a cross-platform C++ application framework. Qt's primary feature

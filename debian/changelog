@@ -1,3 +1,34 @@
+qtbase-opensource-src (5.11.3+dfsg-5) UNRELEASED; urgency=medium
+
+  * Restore GLES-related changes that were dropped in 5.11.3+dfsg-4.
+
+  [ Dmitry Shachnev ]
+  * Add libqt5gui5-gles alternative dependency to platformtheme packages.
+
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sat, 09 Feb 2019 11:19:39 +0300
+
+qtbase-opensource-src (5.11.3+dfsg-4) unstable; urgency=medium
+
+  * Revert the GLES-related symbols changes from the previous upload.
+    These changes were only for experimental and not yet for unstable.
+  * Upload to unstable.
+
+  [ Lisandro Damián Nicanor Pérez Meyer ]
+  * Backport mysql_free_results_when_qsqlquery_finished_is_called.patch,
+    required by akonadi (closes: #921584).
+
+  [ Dmitry Shachnev ]
+  * Fix installed files list on hurd and kfreebsd (closes: #920236).
+    Thanks to Samuel Thibault!
+  * Move qt_lib_opengl.pri from qtbase5-dev to libqt5opengl5-dev.
+  * Backport upstream commit to fix duplex printing (LP: #1776173).
+    Thanks to Robert Bredereck for the initial patch!
+  * Add missing features.h include to hurd-g++ mkspec (closes: #920613).
+    Thanks to Samuel Thibault for the patch!
+  * Update symbols files from ia64 build logs.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Fri, 08 Feb 2019 17:11:47 +0300
+
 qtbase-opensource-src (5.11.3+dfsg-3) experimental; urgency=medium
 
   [ Kai Pastor ]
