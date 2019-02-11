@@ -1,4 +1,4 @@
-qtbase-opensource-src (5.11.3+dfsg-5ubuntu1) UNRELEASED; urgency=medium
+qtbase-opensource-src (5.11.3+dfsg-5ubuntu1) disco; urgency=medium
 
   * Sync with experimental branch of Debian packaging Git.
 
