@@ -1,3 +1,17 @@
+qtbase-opensource-src (5.11.3+dfsg-5ubuntu1) UNRELEASED; urgency=medium
+
+  * Sync with experimental branch of Debian packaging Git.
+
+ -- Dmitry Shachnev <mitya57@ubuntu.com>  Mon, 11 Feb 2019 13:43:15 +0300
+
+qtbase-opensource-src (5.11.3+dfsg-5) unstable; urgency=medium
+
+  * Revert part of the mkspecs movements between packages. The private ones
+    were put into qtbase5-private-dev, but it seems that they are not ready
+    for that (Closes: #921930).
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Sun, 10 Feb 2019 11:47:21 -0300
+
 qtbase-opensource-src (5.11.3+dfsg-4ubuntu1) disco; urgency=medium
 
   * Sync with experimental branch of Debian packaging Git.
