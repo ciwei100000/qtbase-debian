@@ -4,6 +4,7 @@ Revert-QWidgetWindow-Immediately-forward-close-event.patch
 fix_regresion_in_QPointF_operator_equals.patch
 fix-selection-rendering.patch
 fix-glibc-2.28-build.patch
+qprintdialog_duplex.diff
 
 # Debian specific.
 gnukfreebsd.diff

@@ -1,3 +1,10 @@
+qtbase-opensource-src (5.11.1+dfsg-7ubuntu3) UNRELEASED; urgency=medium
+
+  * Backport upstream commit to fix duplex printing (LP: #1776173).
+    Thanks to Robert Bredereck for the initial patch!
+
+ -- Dmitry Shachnev <mitya57@ubuntu.com>  Thu, 28 Feb 2019 13:26:39 +0300
+
 qtbase-opensource-src (5.11.1+dfsg-7ubuntu2) cosmic; urgency=medium
 
   * Add a patch to pass default include directories to qdoc (LP: #1799111).
