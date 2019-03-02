@@ -1,4 +1,4 @@
-qtbase-opensource-src (5.11.1+dfsg-7ubuntu3) UNRELEASED; urgency=medium
+qtbase-opensource-src (5.11.1+dfsg-7ubuntu3) cosmic; urgency=medium
 
   * Backport upstream commit to fix duplex printing (LP: #1776173).
     Thanks to Robert Bredereck for the initial patch!
