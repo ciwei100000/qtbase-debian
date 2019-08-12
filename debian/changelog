@@ -1,3 +1,9 @@
+qtbase-opensource-src (5.12.4+dfsg-4build1) eoan; urgency=medium
+
+  * No change rebuild for libmysqlclient21.
+
+ -- Robie Basak <robie.basak@ubuntu.com>  Mon, 12 Aug 2019 02:04:58 +0000
+
 qtbase-opensource-src (5.12.4+dfsg-4) experimental; urgency=medium
 
   * Mark libqxcb-glx-integration.so and the corresponding CMake file as
