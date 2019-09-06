@@ -6,6 +6,7 @@ mysql_free_results_when_qsqlquery_finished_is_called.patch
 qprintdialog_duplex.diff
 raw_printers.diff
 ensure-qtabletevent-is-not-pre-accepted.patch
+repolish_run_on_direct_children.diff
 
 # Debian specific.
 gnukfreebsd.diff

@@ -3,6 +3,8 @@ qtbase-opensource-src (5.11.3+dfsg1-2) UNRELEASED; urgency=medium
   [ Dmitry Shachnev ]
   * Backport upstream patch to add support for non-PPD printers and avoid
     silent fallback to a printer supporting PPD (closes: #911702, #911844).
+  * Backport upstream patch to fix crash in QStyleSheetStyle::repolish()
+    when using QLabels with rich text (closes: #935909).
 
   [ Melvin Vermeeren ]
   * Backport upstream patch to fix graphics tablet hover events (closes:
