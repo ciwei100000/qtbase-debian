@@ -1,3 +1,12 @@
+qtbase-opensource-src (5.12.4+dfsg-4ubuntu1) UNRELEASED; urgency=medium
+
+  * Backport two patches from upstream 5.12.5 release:
+    - Use Xft DPI as basis for HiDPI scaling (LP: #1834333).
+    - Fix crash when closing floating QDialogs, by reverting a breaking
+      change from 5.12.4 release.
+
+ -- Dmitry Shachnev <mitya57@ubuntu.com>  Wed, 02 Oct 2019 19:06:32 +0300
+
 qtbase-opensource-src (5.12.4+dfsg-4build1) eoan; urgency=medium
 
   * No change rebuild for libmysqlclient21.

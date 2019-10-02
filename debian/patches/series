@@ -3,6 +3,8 @@ mysql_free_results_when_qsqlquery_finished_is_called.patch
 qdockwidget_undocked_notification.diff
 docs_fixes.diff
 hidpi_crash.diff
+gnome_dpi_setting.diff
+revert_reset_winid.diff
 
 # Debian specific.
 gnukfreebsd.diff

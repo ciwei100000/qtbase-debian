@@ -1,0 +1,59 @@
+Description: use Xft DPI as basis for HiDPI scaling
+ GNOME indicates DPI modes by setting high DPI values in Xft.DPI, so
+ we need to use the forced DPI setting instead of the real DPI, as basis
+ for QPA pixel density.
+Origin: upstream, https://code.qt.io/cgit/qt/qtbase.git/commit/?id=121692e5408561f4
+Last-Update: 2019-10-02
+
+--- a/src/plugins/platforms/xcb/qxcbscreen.cpp
++++ b/src/plugins/platforms/xcb/qxcbscreen.cpp
+@@ -658,16 +658,24 @@ QImage::Format QXcbScreen::format() cons
+     return format;
+ }
+ 
+-QDpi QXcbScreen::logicalDpi() const
++int QXcbScreen::forcedDpi() const
+ {
+     static const int overrideDpi = qEnvironmentVariableIntValue("QT_FONT_DPI");
+     if (overrideDpi)
+-        return QDpi(overrideDpi, overrideDpi);
++        return overrideDpi;
+ 
+     const int forcedDpi = m_virtualDesktop->forcedDpi();
+-    if (forcedDpi > 0) {
++    if (forcedDpi > 0)
++        return forcedDpi;
++    return 0;
++}
++
++QDpi QXcbScreen::logicalDpi() const
++{
++    const int forcedDpi = this->forcedDpi();
++    if (forcedDpi > 0)
+         return QDpi(forcedDpi, forcedDpi);
+-    }
++
+     return m_virtualDesktop->dpi();
+ }
+ 
+@@ -739,7 +747,9 @@ void QXcbScreen::updateGeometry(const QR
+     if (m_sizeMillimeters.isEmpty())
+         m_sizeMillimeters = sizeInMillimeters(geometry.size(), m_virtualDesktop->dpi());
+ 
+-    qreal dpi = geometry.width() / physicalSize().width() * qreal(25.4);
++    qreal dpi = forcedDpi();
++    if (dpi <= 0)
++        dpi = geometry.width() / physicalSize().width() * qreal(25.4);
+ 
+     // Use 128 as a reference DPI on small screens. This favors "small UI" over "large UI".
+     qreal referenceDpi = physicalSize().width() <= 320 ? 128 : 96;
+--- a/src/plugins/platforms/xcb/qxcbscreen.h
++++ b/src/plugins/platforms/xcb/qxcbscreen.h
+@@ -208,6 +208,7 @@ public:
+ 
+ private:
+     void sendStartupMessage(const QByteArray &message) const;
++    int forcedDpi() const;
+ 
+     QByteArray getOutputProperty(xcb_atom_t atom) const;
+     QByteArray getEdid() const;
