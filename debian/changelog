@@ -1,4 +1,4 @@
-qtbase-opensource-src (5.12.4+dfsg-4ubuntu1) UNRELEASED; urgency=medium
+qtbase-opensource-src (5.12.4+dfsg-4ubuntu1) eoan; urgency=medium
 
   * Backport two patches from upstream 5.12.5 release:
     - Use Xft DPI as basis for HiDPI scaling (LP: #1834333).
@@ -6,7 +6,7 @@ qtbase-opensource-src (5.12.4+dfsg-4ubuntu1) UNRELEASED; urgency=medium
       change from 5.12.4 release.
   * Update symbols files from the current build logs.
 
- -- Dmitry Shachnev <mitya57@ubuntu.com>  Wed, 02 Oct 2019 19:06:32 +0300
+ -- Dmitry Shachnev <mitya57@ubuntu.com>  Thu, 03 Oct 2019 11:59:59 +0300
 
 qtbase-opensource-src (5.12.4+dfsg-4build1) eoan; urgency=medium
 
