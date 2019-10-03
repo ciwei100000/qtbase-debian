@@ -4,6 +4,7 @@ qtbase-opensource-src (5.12.4+dfsg-4ubuntu1) UNRELEASED; urgency=medium
     - Use Xft DPI as basis for HiDPI scaling (LP: #1834333).
     - Fix crash when closing floating QDialogs, by reverting a breaking
       change from 5.12.4 release.
+  * Update symbols files from the current build logs.
 
  -- Dmitry Shachnev <mitya57@ubuntu.com>  Wed, 02 Oct 2019 19:06:32 +0300
 
