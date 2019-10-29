@@ -1,5 +1,7 @@
 qtbase-opensource-src (5.11.3+dfsg1-1+deb10u1) UNRELEASED; urgency=medium
 
+  [ Dmitry Shachnev ]
+  * Fix crash when text contains too many directional chars (CVE-2019-18281).
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Tue, 29 Oct 2019 16:15:00 +0300
 
