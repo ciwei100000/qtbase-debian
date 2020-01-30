@@ -1,9 +1,8 @@
 qtbase-opensource-src (5.7.1+dfsg-3+deb9u2) stretch-security; urgency=high
 
-  [ Lisandro Damián Nicanor Pérez Meyer ]
   * Backport fix for CVE-2020-0569: Do not load plugin from the CWD.
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Thu, 30 Jan 2020 12:23:11 -0300
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Thu, 30 Jan 2020 12:33:15 -0300
 
 qtbase-opensource-src (5.7.1+dfsg-3+deb9u1) stretch-security; urgency=medium
 
