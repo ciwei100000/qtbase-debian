@@ -18,3 +18,4 @@ revert_upstream_bsymbolic_change.patch
 cve_2018-15518.patch
 cve_2018-19870.patch
 cve_2018-19873.patch
+CVE-2020-0569.diff
