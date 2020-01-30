@@ -8,6 +8,8 @@ cve-2019-18281.diff
 raw_printers.diff
 ensure-qtabletevent-is-not-pre-accepted.patch
 repolish_run_on_direct_children.diff
+CVE-2020-0569.diff
+CVE-2020-0570.diff
 
 # Debian specific.
 gnukfreebsd.diff
