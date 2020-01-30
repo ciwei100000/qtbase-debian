@@ -1,11 +1,11 @@
-qtbase-opensource-src (5.11.3+dfsg1-1+deb10u3) UNRELEASED; urgency=medium
+qtbase-opensource-src (5.11.3+dfsg1-1+deb10u3) buster-security; urgency=high
 
   [ Dmitry Shachnev ]
   * Backport fixes for two vulnerabilities:
     - CVE-2020-0569: Do not load plugin from the CWD.
     - CVE-2020-0570: Qt tries to load invalid library from CWD.
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Thu, 30 Jan 2020 10:33:04 -0300
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Thu, 30 Jan 2020 10:42:01 -0300
 
 qtbase-opensource-src (5.11.3+dfsg1-1+deb10u2) buster; urgency=medium
 
