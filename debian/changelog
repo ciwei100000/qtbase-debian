@@ -1,3 +1,13 @@
+qtbase-opensource-src (5.3.2+dfsg-4+deb8u3) jessie-security; urgency=medium
+
+  * CVE-2018-15518: Fix a double-free or corruption during parsing
+    of a specially crafted illegal XML document.
+  * CVE-2018-19870: A malformed GIF image might have caused a NULL
+    pointer dereference in QGifHandler resulting in a segmentation fault.
+  * CVE-2018-19873: QBmpHandler had a buffer overflow via BMP data.
+
+ -- Adrian Bunk <bunk@debian.org>  Wed, 02 Jan 2019 20:37:34 +0200
+
 qtbase-opensource-src (5.3.2+dfsg-4+deb8u2) jessie; urgency=medium
 
   * Backport upstream change (networkconfig_prevent_bad_deref.patch) to

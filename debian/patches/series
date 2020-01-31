@@ -13,3 +13,8 @@ fix_sparc_atomics.patch
 # Debian specific.
 remove_google_adsense.patch
 revert_upstream_bsymbolic_change.patch
+
+# security fixes
+cve_2018-15518.patch
+cve_2018-19870.patch
+cve_2018-19873.patch
