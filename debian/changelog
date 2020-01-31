@@ -1,9 +1,16 @@
 qtbase-opensource-src (5.3.2+dfsg-4+deb8u4) jessie-security; urgency=medium
 
+  [ Mike Gabriel ]
+  * Non-maintainer upload by the LTS team.
+  * debian/patches/CVE-2020-0569.diff:
+    + Backport from qtbase/stretch to qtbase/jessie.
+    + Add myself to the header as backporter of the patch to
+      qtbase-opensource-src/jessie.
+
   [ Lisandro Damián Nicanor Pérez Meyer ]
   * Backport fix for CVE-2020-0569: Do not load plugin from the CWD.
 
- -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Thu, 30 Jan 2020 12:33:15 -0300
+ -- Mike Gabriel <sunweaver@debian.org>  Fri, 31 Jan 2020 15:55:12 +0100
 
 qtbase-opensource-src (5.3.2+dfsg-4+deb8u3) jessie-security; urgency=medium
 
