@@ -977,7 +977,7 @@ Last-Update: 2019-06-15
  { setMinimumSize(QSizeF(aw, ah)); }
 --- a/src/widgets/widgets/qmenu.cpp
 +++ b/src/widgets/widgets/qmenu.cpp
-@@ -1782,21 +1782,6 @@ QAction *QMenu::addAction(const QString
+@@ -1784,21 +1784,6 @@ QAction *QMenu::addAction(const QString
      return action;
  }
  
@@ -999,7 +999,7 @@ Last-Update: 2019-06-15
  /*!\fn template<typename Functor> QAction *QMenu::addAction(const QString &text, Functor functor, const QKeySequence &shortcut = 0)
  
      \since 5.6
-@@ -1821,25 +1806,11 @@ QAction *QMenu::addAction(const QString
+@@ -1823,25 +1808,11 @@ QAction *QMenu::addAction(const QString
      This convenience function creates a new action with the text \a
      text and an optional shortcut \a shortcut. The action's
      \l{QAction::triggered()}{triggered()} signal is connected to the
@@ -1029,7 +1029,7 @@ Last-Update: 2019-06-15
  
      QMenu takes ownership of the returned QAction.
  */
-@@ -1868,8 +1839,9 @@ QAction *QMenu::addAction(const QString
+@@ -1870,8 +1841,9 @@ QAction *QMenu::addAction(const QString
      This convenience function creates a new action with an \a icon
      and some \a text and an optional shortcut \a shortcut. The action's
      \l{QAction::triggered()}{triggered()} signal is connected to the
