@@ -7,6 +7,7 @@ qtbase-opensource-src (5.12.8+dfsg-0ubuntu1) UNRELEASED; urgency=medium
     - CVE-2020-0570.diff
     - CVE-2015-9541.diff
   * Refresh other patches.
+  * Update debian/copyright using debian/scripts/update-copyright.
 
  -- Dmitry Shachnev <mitya57@ubuntu.com>  Tue, 07 Apr 2020 11:22:59 +0300
 
