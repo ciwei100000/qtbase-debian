@@ -1,6 +1,11 @@
 qtbase-opensource-src (5.12.8+dfsg-0ubuntu1) UNRELEASED; urgency=medium
 
   * New upstream bugfix release.
+  * Drop patches, included in the new release:
+    - uic_global_includes.diff
+    - CVE-2020-0569.diff
+    - CVE-2020-0570.diff
+    - CVE-2015-9541.diff
 
  -- Dmitry Shachnev <mitya57@ubuntu.com>  Tue, 07 Apr 2020 11:22:59 +0300
 
