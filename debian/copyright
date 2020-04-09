@@ -1119,7 +1119,7 @@ Files: config.tests/avx512/avx512.cpp
        tests/auto/corelib/serialization/qcborstreamwriter/tst_qcborstreamwriter.cpp
        tests/auto/corelib/serialization/qcborvalue/tst_qcborvalue.cpp
        tests/auto/corelib/serialization/qcborvalue_json/tst_qcborvalue_json.cpp
-Copyright: 2015-2018 Intel Corporation
+Copyright: 2015-2019 Intel Corporation
 License: LGPL-3 or GPL-2
 
 Files: src/corelib/io/qstorageinfo_unix.cpp
@@ -1278,7 +1278,7 @@ Files: bin/syncqt.pl
        src/testlib/qtest.h
        src/testlib/qtestcase.cpp
        src/widgets/kernel/qwidget.cpp
-Copyright: 2015-2019 Intel Corporation
+Copyright: 2015-2020 Intel Corporation
            2016-2018 The Qt Company Ltd.
 License: LGPL-3 or GPL-2
 
@@ -1365,7 +1365,7 @@ License: LGPL-3 or GPL-2
 Files: src/platformsupport/input/evdevtouch/qevdevtouchhandler.cpp
        src/platformsupport/input/evdevtouch/qevdevtouchhandler_p.h
 Copyright: 2016 Jolla Ltd, author: <gunnar.sletta@jollamobile.com>
-           2016 The Qt Company Ltd.
+           2016-2019 The Qt Company Ltd.
 License: LGPL-3 or GPL-2
 
 Files: mkspecs/haiku-g++/qplatformdefs.h

@@ -1,3 +1,37 @@
+qtbase-opensource-src (5.12.8+dfsg-0ubuntu1) focal; urgency=medium
+
+  * New upstream bugfix release.
+  * Drop patches, included in the new release:
+    - uic_global_includes.diff
+    - CVE-2020-0569.diff
+    - CVE-2020-0570.diff
+    - CVE-2015-9541.diff
+  * Refresh other patches.
+  * Update debian/copyright using debian/scripts/update-copyright.
+  * Bump ABI version to qtbase-abi-5-12-8.
+  * Bump Build-Depends-Indep to 5.12.8.
+  * Update symbols files from the current build logs.
+
+ -- Dmitry Shachnev <mitya57@ubuntu.com>  Thu, 09 Apr 2020 10:57:56 +0300
+
+qtbase-opensource-src (5.12.5+dfsg-9build1) focal; urgency=medium
+
+  * No-change rebuild for icu soname change.
+
+ -- Matthias Klose <doko@ubuntu.com>  Tue, 03 Mar 2020 21:50:35 +0100
+
+qtbase-opensource-src (5.12.5+dfsg-9) unstable; urgency=medium
+
+  [ Dmitry Shachnev ]
+  * Backport upstream patch to add an expansion limit for XML entities
+    (CVE-2015-9541, closes: #951066).
+    - Add two new symbols to debian/libqt5core5a.symbols.
+
+  [ Helmut Grohne ]
+  * qmake cross wrapper should pass QMAKE_STRIP. (Closes: #950507)
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Thu, 27 Feb 2020 16:52:19 +0300
+
 qtbase-opensource-src-gles (5.12.5+dfsg-2) unstable; urgency=medium
 
   * Merge qtbase-opensource-src 5.12.5+dfsg-8 upload.
