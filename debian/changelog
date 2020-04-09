@@ -1,4 +1,4 @@
-qtbase-opensource-src (5.12.8+dfsg-0ubuntu1) UNRELEASED; urgency=medium
+qtbase-opensource-src (5.12.8+dfsg-0ubuntu1) focal; urgency=medium
 
   * New upstream bugfix release.
   * Drop patches, included in the new release:
@@ -12,7 +12,7 @@ qtbase-opensource-src (5.12.8+dfsg-0ubuntu1) UNRELEASED; urgency=medium
   * Bump Build-Depends-Indep to 5.12.8.
   * Update symbols files from the current build logs.
 
- -- Dmitry Shachnev <mitya57@ubuntu.com>  Tue, 07 Apr 2020 11:22:59 +0300
+ -- Dmitry Shachnev <mitya57@ubuntu.com>  Thu, 09 Apr 2020 10:57:56 +0300
 
 qtbase-opensource-src (5.12.5+dfsg-9build1) focal; urgency=medium
 
