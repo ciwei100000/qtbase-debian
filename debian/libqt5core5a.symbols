@@ -1,4 +1,4 @@
-# SymbolsHelper-Confirmed: 5.12.5 alpha amd64 arm64 armel armhf hppa i386 ia64 m68k mips64el mipsel powerpc ppc64 ppc64el riscv64 s390x sh4 sparc64 x32
+# SymbolsHelper-Confirmed: 5.12.8 amd64 arm64 armhf i386 ppc64el riscv64 s390x
 libQt5Core.so.5 libqt5core5a #MINVER#
 | libqt5core5a #MINVER#, qtbase-abi-5-12-8
 * Build-Depends-Package: qtbase5-dev
@@ -20,6 +20,7 @@ libQt5Core.so.5 libqt5core5a #MINVER#
  _Z10forcepointR11QTextStream@Qt_5 5.0.2
  _Z10noshowbaseR11QTextStream@Qt_5 5.0.2
  _Z10qHBNewFacePvPF8HB_ErrorS_jPhPjE@Qt_5 5.0.2
+ (arch=amd64 i386|subst)_Z10qRandomCpuPv{qptrdiff}@Qt_5 5.12.8
  _Z10qShapeItemP14HB_ShaperItem_@Qt_5 5.0.2
  _Z10qTerminatev@Qt_5 5.0.2
  (arch=sh4)_Z10qvsnprintfPcjPKc13__va_list_tag@Qt_5 5.4.2
@@ -4207,6 +4208,7 @@ libQt5Core.so.5 libqt5core5a #MINVER#
  _ZNK14QItemSelection8containsERK11QModelIndex@Qt_5 5.0.2
  _ZNK14QLocalePrivate16dateTimeToStringE11QStringViewRK9QDateTimeRK5QDateRK5QTimePK7QLocale@Qt_5_PRIVATE_API 5.10.0 1
  _ZNK14QLocalePrivate17measurementSystemEv@Qt_5_PRIVATE_API 5.0.2 1
+ _ZNK14QLocalePrivate7rawNameEc@Qt_5_PRIVATE_API 5.12.8 1
  _ZNK14QLocalePrivate9bcp47NameEc@Qt_5_PRIVATE_API 5.1.0 1
  _ZNK14QMessageLogger4infoEPFRK16QLoggingCategoryvE@Qt_5 5.5.0
  _ZNK14QMessageLogger4infoEPFRK16QLoggingCategoryvEPKcz@Qt_5 5.5.0
@@ -5469,13 +5471,13 @@ libQt5Core.so.5 libqt5core5a #MINVER#
  (optional=templinst)_ZNSt17_Temporary_bufferIP21QPersistentModelIndexS0_ED1Ev@Qt_5 5.9.1
  (optional=templinst)_ZNSt17_Temporary_bufferIP21QPersistentModelIndexS0_ED2Ev@Qt_5 5.9.1
  (optional=templinst|arch=armel armhf hppa hurd-i386 i386 kfreebsd-i386 m68k mipsel powerpc sh4 x32)_ZNSt23mersenne_twister_engineIjLj32ELj624ELj397ELj31ELj2567483615ELj11ELj4294967295ELj7ELj2636928640ELj15ELj4022730752ELj18ELj1812433253EE11_M_gen_randEv@Qt_5 5.11.1
- (optional=templinst|arch=alpha amd64 arm64 ia64 mips64el ppc64 ppc64el riscv64 s390x sparc64)_ZNSt23mersenne_twister_engineIjLm32ELm624ELm397ELm31ELj2567483615ELm11ELj4294967295ELm7ELj2636928640ELm15ELj4022730752ELm18ELj1812433253EE11_M_gen_randEv@Qt_5 5.11.3
+ (optional=templinst|arch=alpha amd64 arm64 ia64 mips64el ppc64 ppc64el riscv64 sparc64)_ZNSt23mersenne_twister_engineIjLm32ELm624ELm397ELm31ELj2567483615ELm11ELj4294967295ELm7ELj2636928640ELm15ELj4022730752ELm18ELj1812433253EE11_M_gen_randEv@Qt_5 5.11.3
  (optional=templinst|subst)_ZNSt23mersenne_twister_engineIjL{size_t}32EL{size_t}624EL{size_t}397EL{size_t}31ELj2567483615EL{size_t}11ELj4294967295EL{size_t}7ELj2636928640EL{size_t}15ELj4022730752EL{size_t}18ELj1812433253EE4seedIN16QRandomGenerator15SystemGeneratorEEENSt9enable_ifIXsrSt6__and_IJSt6__not_ISt7is_sameINSt9remove_cvINSt16remove_referenceIT_E4typeEE4typeES0_EESt11is_unsignedINSA_11result_typeEES6_ISt14is_convertibleISA_jEEEE5valueEvE4typeERSA_@Qt_5 5.12.4
  (optional=templinst|subst)_ZNSt23mersenne_twister_engineIjL{size_t}32EL{size_t}624EL{size_t}397EL{size_t}31ELj2567483615EL{size_t}11ELj4294967295EL{size_t}7ELj2636928640EL{size_t}15ELj4022730752EL{size_t}18ELj1812433253EE4seedISt8seed_seqEENSt9enable_ifIXsrSt6__and_IJSt6__not_ISt7is_sameINSt9remove_cvINSt16remove_referenceIT_E4typeEE4typeES0_EESt11is_unsignedINS9_11result_typeEES5_ISt14is_convertibleIS9_jEEEE5valueEvE4typeERS9_@Qt_5 5.12.4
  (optional=templinst)_ZNSt3_V28__rotateIP21QPersistentModelIndexEET_S3_S3_S3_St26random_access_iterator_tag@Qt_5 5.5.0
  (optional=templinst)_ZNSt3_V28__rotateIPiEET_S2_S2_S2_St26random_access_iterator_tag@Qt_5 5.5.0
- (optional=templinst)_ZNSt6vectorIjSaIjEE17_M_realloc_insertIJjEEEvN9__gnu_cxx17__normal_iteratorIPjS1_EEDpOT_@Qt_5 5.10.1
- (optional=templinst|subst)_ZSt17__rotate_adaptiveIP21QPersistentModelIndexS1_{ssize_t}ET_S2_S2_S2_T1_S3_T0_S3_@Qt_5 5.0.2
+ (optional=templinst|arch=!s390x)_ZNSt6vectorIjSaIjEE17_M_realloc_insertIJjEEEvN9__gnu_cxx17__normal_iteratorIPjS1_EEDpOT_@Qt_5 5.10.1
+ (optional=templinst|subst|arch=!s390x)_ZSt17__rotate_adaptiveIP21QPersistentModelIndexS1_{ssize_t}ET_S2_S2_S2_T1_S3_T0_S3_@Qt_5 5.0.2
  (optional=templinst|subst)_ZSt17__rotate_adaptiveIPiS0_{ssize_t}ET_S1_S1_S1_T1_S2_T0_S2_@Qt_5 5.0.2
  (optional=templinst|arch=ia64)_ZSt20get_temporary_bufferIiESt4pairIPT_lEl@Qt_5 5.11.3
  (optional=templinst|arch=armel armhf hurd-i386 i386 kfreebsd-i386 m68k mips mipsel powerpc powerpcspe)_ZSt4swapIN8QVariant7PrivateEENSt9enable_ifIXsrSt6__and_IJSt6__not_ISt15__is_tuple_likeIT_EESt21is_move_constructibleIS6_ESt18is_move_assignableIS6_EEE5valueEvE4typeERS6_SG_@Qt_5 5.9.1
