@@ -1,3 +1,8 @@
+qtbase-opensource-src (5.11.3+dfsg1-1+deb10u4) UNRELEASED; urgency=medium
+
+
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Fri, 22 May 2020 15:31:35 -0300
+
 qtbase-opensource-src (5.11.3+dfsg1-1+deb10u3) buster-security; urgency=high
 
   [ Dmitry Shachnev ]
