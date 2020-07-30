@@ -10,6 +10,7 @@ ensure-qtabletevent-is-not-pre-accepted.patch
 repolish_run_on_direct_children.diff
 CVE-2020-0569.diff
 CVE-2020-0570.diff
+XCB_Fix_clipboard_breaking_when_timer_wraps_after_50_days.patch
 
 # Debian specific.
 gnukfreebsd.diff

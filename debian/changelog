@@ -1,5 +1,8 @@
 qtbase-opensource-src (5.11.3+dfsg1-1+deb10u4) UNRELEASED; urgency=medium
 
+  [ Lisandro Damián Nicanor Pérez Meyer ]
+  * Backport XCB_Fix_clipboard_breaking_when_timer_wraps_after_50_days.patch
+    (Closes: #961293). Thanks Nicolás for poiting us to the bug fix.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Fri, 22 May 2020 15:31:35 -0300
 
