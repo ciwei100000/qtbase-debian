@@ -5,7 +5,7 @@ Subject: [PATCH] XCB: Fix clipboard breaking when timer wraps after 50 days
 Reviewed-By: Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>
 Bug-Debian: #961293
 
-xcb_timestamp_t is a 32-bit unsigned value in miliseconds, so it
+xcb_timestamp_t is a 32-bit unsigned value in milliseconds, so it
 wraps after 49.7 days. When it happens, QXcbConnection::m_time stops
 updating and copy & paste in an application would not work until the
 application is restarted. This patch detects the timer wrap and
