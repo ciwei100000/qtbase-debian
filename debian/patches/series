@@ -19,3 +19,4 @@ nonlinux_utime.diff
 qdoc_default_incdirs.diff
 path_max.diff
 qstorageinfo_linux.diff
+remove_no_fat_lto.diff

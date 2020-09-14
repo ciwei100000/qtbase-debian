@@ -1,0 +1,19 @@
+Description: remove -fno-fat-lto-objects from gcc profile
+ -fno-fat-lto-objects is defaulted to yes if -flto is set but it stops
+ external flag -ffat-lto-objects from working
+Author: ciwei100000 <ciwei100000@gmail.com>
+Forwarded: not-needed
+Last-Update: 2020-09-14
+
+
+--- a/mkspecs/common/gcc-base.conf
++++ b/mkspecs/common/gcc-base.conf
+@@ -51,7 +51,7 @@ QMAKE_CFLAGS_YACC          += -Wno-unused -Wno-parentheses
+ QMAKE_CFLAGS_HIDESYMS      += -fvisibility=hidden
+ QMAKE_CFLAGS_EXCEPTIONS_OFF += -fno-exceptions
+ QMAKE_CFLAGS_SPLIT_SECTIONS += -ffunction-sections -fdata-sections
+-QMAKE_CFLAGS_LTCG           = -flto -fno-fat-lto-objects
++QMAKE_CFLAGS_LTCG           = -flto
+ QMAKE_CFLAGS_LTCG_FATOBJECTS = -ffat-lto-objects
+ QMAKE_CFLAGS_DISABLE_LTCG   = -fno-lto
+
