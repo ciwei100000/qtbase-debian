@@ -1,4 +1,4 @@
-qtbase-opensource-src (5.11.3+dfsg1-1+deb10u4) UNRELEASED; urgency=medium
+qtbase-opensource-src (5.11.3+dfsg1-1+deb10u4) buster; urgency=medium
 
   [ Dmitry Shachnev ]
   * Backport upstream patch to fix buffer overflow in XBM parser
@@ -8,7 +8,7 @@ qtbase-opensource-src (5.11.3+dfsg1-1+deb10u4) UNRELEASED; urgency=medium
   * Backport XCB_Fix_clipboard_breaking_when_timer_wraps_after_50_days.patch
     (Closes: #961293). Thanks Nicolás for pointing us to the bug fix.
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Fri, 22 May 2020 15:31:35 -0300
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Mon, 14 Sep 2020 09:15:20 -0300
 
 qtbase-opensource-src (5.11.3+dfsg1-1+deb10u3) buster-security; urgency=high
 
