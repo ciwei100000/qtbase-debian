@@ -1,3 +1,10 @@
+qtbase-opensource-src (5.15.2+dfsg-10c1) unstable; urgency=medium
+
+  * Merge tag 'debian/5.15.2+dfsg-10' into ciwei100000
+  * Update remove_no_fat_lto.diff for 5.15.2
+
+ -- Xuqing Liu <ciwei100000@gmail.com>  Sun, 22 Aug 2021 06:27:34 -0700
+
 qtbase-opensource-src (5.15.2+dfsg-10) unstable; urgency=medium
 
   [ Lu Yaning ]
