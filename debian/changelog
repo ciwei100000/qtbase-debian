@@ -1,3 +1,179 @@
+qtbase-opensource-src (5.15.2+dfsg-10) unstable; urgency=medium
+
+  [ Lu Yaning ]
+  * Restore fix-misplacement-of-placeholder-text-in-QLineEdit.diff.
+  * Backport upstream patch to fix the regression with placement of
+    placeholder text in QLineEdits with action icons.
+
+  [ Dmitry Shachnev ]
+  * Backport upstream patch to fix icon display on checkable QPushButtons
+    with Fusion style (closes: #991255).
+  * Backport upstream patch to remove MySQL version checks, which led to
+    wrong conclusions with MariaDB Connector ≥ 3.2.
+  * Backport upstream patch to fix QTextFormat::FullWidthSelection for
+    right-to-left text layouts.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Sun, 15 Aug 2021 21:32:57 +0300
+
+qtbase-opensource-src (5.15.2+dfsg-9) unstable; urgency=medium
+
+  * Revert adding fix-misplacement-of-placeholder-text-in-QLineEdit.diff.
+    Unfortunately it causes a regression (see QTBUG-94824).
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Fri, 02 Jul 2021 18:58:04 +0300
+
+qtbase-opensource-src (5.15.2+dfsg-8) unstable; urgency=medium
+
+  [ Lu Yaning ]
+  * Backport upstream patch to fix misplacement of placeholder text in
+    QLineEdit with RTL content.
+
+  [ Dmitry Shachnev ]
+  * Remove the qmimeprovider.cpp part of mime_globs.diff. It is unrelated
+    to the original purpose of that patch, and causes various problems
+    (closes: #989255, #989744, #990129).
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Mon, 28 Jun 2021 20:38:59 +0300
+
+qtbase-opensource-src (5.15.2+dfsg-7) unstable; urgency=medium
+
+  [ Lu Yaning ]
+  * Backport upstream patch to fix invalid pointer return with
+    QGridLayout::itemAt(-1): fix-invalid-pointer-return-with-QGridLayout.diff
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Thu, 03 Jun 2021 09:55:29 -0300
+
+qtbase-opensource-src (5.15.2+dfsg-6) unstable; urgency=medium
+
+  * Backport upstream patch to adjust QMimeDatabase behavior (LP: #1857824).
+  * Make qtbase5-dev break qt5-default (see #976389, LP: #1920130).
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Sat, 29 May 2021 12:04:21 +0300
+
+qtbase-opensource-src (5.15.2+dfsg-5) unstable; urgency=medium
+
+  * Backport upstream patch to fix allocated memory of QByteArray returned by
+    QIODevice::readLine (closes: #982882).
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Sun, 21 Feb 2021 20:00:31 +0300
+
+qtbase-opensource-src (5.15.2+dfsg-4) unstable; urgency=medium
+
+  * Add Conflicts: against the -gles packages, to make that relation mutual.
+    (Thanks to David Kalnischkies for the suggestion; see also #976389.)
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Mon, 01 Feb 2021 21:21:48 +0300
+
+qtbase-opensource-src (5.15.2+dfsg-3) unstable; urgency=medium
+
+  * Backport upstream patch to fix memory leak in QNetworkAccessManager
+    from QMetaObjectPrivate::connect.
+  * Backport upstream changes to add #include <limits> for GCC 11.
+  * Update debian/watch: use format 4, and track only 5.15.x releases.
+  * Update debian/libqt5core5a.symbols for hurd-i386.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Tue, 26 Jan 2021 20:17:11 +0300
+
+qtbase-opensource-src (5.15.2+dfsg-2) unstable; urgency=medium
+
+  [ Alexander Volkov ]
+  * Backport upstream patch xcb_screens_uaf.patch in order to fix
+    use-after-free in the xcb plugin.
+
+  [ Dmitry Shachnev ]
+  * Build with libxcb-util-dev 0.4.0 which Debian now has.
+    - Drop loosen_xcb-util_requirement.diff, no longer needed.
+  * Bump Standards-Version to 4.5.1, no changes needed.
+  * Upload to unstable.
+
+  [ Lisandro Damián Nicanor Pérez Meyer ]
+  * Build the experimental XCB native painting engine. This has been disabled
+    as a default by upstream, but our X2Go users do really benefit from it if
+    they export QT_XCB_NATIVE_PAINTING (Closes: #976274).
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Fri, 11 Dec 2020 11:31:30 +0300
+
+qtbase-opensource-src (5.15.2+dfsg-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Drop two patches that are included in the new release:
+    - emit_geometry_changed.diff
+    - clone_sigchld.diff
+  * Bump ABI version to qtbase-abi-5-15-2.
+  * Update debian/copyright using debian/scripts/update-copyright.
+  * Add a patch to loosen xcb-util requirement from 0.3.9 to 0.3.8
+    (see #975259).
+  * Build-depend on libxcb-util0-dev.
+  * Update debian/qtbase5-private-dev.install for the new release.
+  * Update symbols files for the new release.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Fri, 20 Nov 2020 16:08:35 +0300
+
+qtbase-opensource-src (5.15.1+dfsg-4) unstable; urgency=medium
+
+  [ Alexander Volkov ]
+  * Backport upstream patch xcb_screens_uaf.patch in order to fix
+    use-after-free in the xcb plugin.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Mon, 23 Nov 2020 15:16:00 -0300
+
+qtbase-opensource-src (5.15.1+dfsg-3) unstable; urgency=medium
+
+  * Remove debian/source/lintian-overrides. The remaining override
+    is not needed since we removed qt5-default package.
+  * Update debian/libqt5core5a.symbols for hppa.
+  * Backport upstream patch to fix issues with debugging applications
+    that use QProcess (closes: #974602).
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Thu, 19 Nov 2020 21:39:27 +0300
+
+qtbase-opensource-src (5.15.1+dfsg-2) unstable; urgency=medium
+
+  [ Dmitry Shachnev ]
+  * Backport upstream patch to fix multiscreen-related regression that
+    affects Plasma.
+  * Update debian/libqt5core5a.symbols from buildds’ logs.
+  * Upload to unstable.
+
+  [ Lisandro Damián Nicanor Pérez Meyer ]
+  * Apply cross_build_mysql.diff to get closer to cross building on a Debian
+    environment. Thanks Helmut Grohne for the patch! (Closes: #971604).
+  * Remove qt5-default. Nowadays it's not needed as Qt 5 is the only Qt version
+    in Debian and it brought more problems than solutions.
+
+  [ Helmut Grohne ]
+  * qmake cross wrapper: Allow passing -qt5. (Closes: #972640)
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Wed, 28 Oct 2020 21:53:04 +0300
+
+qtbase-opensource-src (5.15.1+dfsg-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Drop all patches that have been included in the new release:
+    - CVE-2015-9541.diff
+    - CVE-2020-17507.diff
+    - CVE-2020-13962.diff
+    - enable_a11y_on_linux.diff
+    - fix_qlibrary_deadlock.diff
+    - moc_handle_includes.diff
+    - no_isystem.diff
+    - clarify_pic_message.diff
+  * Refresh other patches.
+  * Update symbols files from buildds’ logs.
+  * Update to debhelper compat level 13.
+    - Drop dh_missing override, --fail-missing is now default behavior.
+    - Use ${DEB_HOST_MULTIARCH} substitution.
+    - Stop using dh-exec for .links files, as debhelper now supports
+      substitutions natively.
+  * Bump qttools build-dependencies to 5.15.
+  * Bump ABI version to qtbase-abi-5-15-1.
+  * Update debian/copyright using debian/scripts/update-copyright.
+  * Manually update non-generated part of debian/copyright.
+  * Update install files for the new release.
+  * Update symbols files from the current build log.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Thu, 10 Sep 2020 14:41:18 +0300
+
 qtbase-opensource-src (5.14.2+dfsg-6-c2) unstable; urgency=medium
 
   * Added patch to remove -fno-fat-lto-objects from gcc-base.conf.
