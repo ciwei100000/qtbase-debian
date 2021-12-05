@@ -1,3 +1,9 @@
+qtbase-opensource-src (5.15.2+dfsg-14c1) unstable; urgency=medium
+
+  * Merge tag 'debian/5.15.2+dfsg-14' into ciwei100000
+
+ -- Xuqing Liu <ciwei100000@gmail.com>  Sun, 05 Dec 2021 01:50:16 -0800
+
 qtbase-opensource-src (5.15.2+dfsg-14) unstable; urgency=medium
 
   * Backport four upstream commits to fix massive memory consumption when
