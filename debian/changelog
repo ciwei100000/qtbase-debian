@@ -1,3 +1,9 @@
+qtbase-opensource-src (5.15.2+dfsg-15c1) unstable; urgency=medium
+
+  * Merge tag 'debian/5.15.2+dfsg-15' into ciwei100000
+
+ -- Xuqing Liu <ciwei100000@gmail.com>  Sat, 26 Feb 2022 20:49:42 -0800
+
 qtbase-opensource-src (5.15.2+dfsg-15) unstable; urgency=medium
 
   * Backport upstream changes to improve support for OpenSSL 3.0.
