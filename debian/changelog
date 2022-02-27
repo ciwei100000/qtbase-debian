@@ -1,3 +1,14 @@
+qtbase-opensource-src (5.15.2+dfsg-15) unstable; urgency=medium
+
+  * Backport upstream changes to improve support for OpenSSL 3.0.
+    - Don't hardcode libssl version in Depends, fill it dynamically.
+  * Replace -ffile-prefix-map in qmodule.pri.
+  * Backport upstream patch to make QProcess not search for executables in
+    CWD unless explicitly told so (CVE-2022-25255).
+  * Update some Lintian overrides.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Tue, 22 Feb 2022 00:00:28 +0300
+
 qtbase-opensource-src (5.15.2+dfsg-14c1) unstable; urgency=medium
 
   * Merge tag 'debian/5.15.2+dfsg-14' into ciwei100000
